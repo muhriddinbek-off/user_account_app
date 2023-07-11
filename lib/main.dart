@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:user_account_app/pages/home_page.dart';
-import 'package:user_account_app/pages/main_menu.dart';
 
-void main() => runApp(MyApp());
+import 'pages/home_page.dart';
+import 'pages/main_menu.dart';
+
+void main() async {
+  //  userInformation = await userRandom();
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

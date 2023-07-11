@@ -6,9 +6,7 @@ import 'package:user_account_app/modal/modal_information.dart';
 Future<ModalInformation> userRandom() async {
   Uri url = Uri.parse('https://randomuser.me/api/');
 
-  http.Response response = await http.get(url, headers: {
-    'Content-Type': 'aplication/json',
-  });
+  http.Response response = await http.get(url);
 
   Map data = jsonDecode(response.body);
 
