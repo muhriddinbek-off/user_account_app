@@ -12,14 +12,15 @@ class MainMenu extends StatelessWidget {
           backgroundColor: Colors.white,
           body: Stack(
             children: [
+              Positioned(left: -230, right: -150, top: -30, child: Image.asset('assets/images/backgroundimage.png')),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Column(
                     children: [
-                      Row(
+                      const Row(
                         mainAxisAlignment: MainAxisAlignment.start,
-                        children: const [
+                        children: [
                           Padding(padding: EdgeInsets.only(left: 12, top: 21), child: Icon(Icons.menu, size: 50)),
                         ],
                       ),
@@ -36,7 +37,6 @@ class MainMenu extends StatelessWidget {
                   const Padding(padding: EdgeInsets.only(bottom: 40, left: 130), child: Icon(Icons.arrow_back, size: 50)),
                 ],
               ),
-              Positioned(left: -230, right: -150, top: -30, child: Image.asset('assets/images/backgroundimage.png')),
             ],
           )),
     );

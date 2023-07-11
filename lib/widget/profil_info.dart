@@ -1,15 +1,24 @@
 import 'package:flutter/material.dart';
 
 class ProfilInfo extends StatelessWidget {
-  const ProfilInfo({super.key});
+  final String username;
+  final String contact;
+  final String email;
+
+  const ProfilInfo({
+    super.key,
+    required this.username,
+    required this.contact,
+    required this.email,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        accountInformation(Icons.person, 'Username', 'MorganJamesDesigner'),
-        accountInformation(Icons.call, 'Contact', '+24500000000'),
-        accountInformation(Icons.mail, 'Email ', 'mjdesigner@gmail.com'),
+        accountInformation(Icons.person, 'Username', username),
+        accountInformation(Icons.call, 'Contact', contact),
+        accountInformation(Icons.mail, 'Email ', email),
       ],
     );
   }

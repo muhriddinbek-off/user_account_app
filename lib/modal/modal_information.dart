@@ -3,7 +3,7 @@ class ModalInformation {
   final String firstName;
   final String lastSName;
   final String userName;
-  final int phone;
+  final String phone;
   final String email;
 
   ModalInformation({
@@ -15,17 +15,18 @@ class ModalInformation {
     required this.email,
   });
 
-  factory ModalInformation.fromJson(Map data){
+  factory ModalInformation.fromJson(Map data) {
     return ModalInformation(
-      image: data['medium'], 
-      firstName: data['first'], 
-      lastSName: data['last'], 
-      userName: data['username'], 
-      phone: data['phone'], 
-      email: data['email']);
+      image: data['results'][0]['picture']['large'],
+      firstName: data['results'][0]['name']['first'],
+      lastSName: data['results'][0]['name']['last'],
+      userName: data['results'][0]['login']['username'],
+      phone: data['results'][0]['phone'],
+      email: data['results'][0]['email'],
+    );
   }
 
-  Map toJson (){
+  Map toJson() {
     return {
       "image": image,
       'firstName': firstName,
@@ -33,6 +34,6 @@ class ModalInformation {
       "userName": userName,
       "phone": phone,
       "email": email,
-    }
+    };
   }
 }
