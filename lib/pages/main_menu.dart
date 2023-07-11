@@ -18,9 +18,9 @@ class MainMenu extends StatelessWidget {
                 children: [
                   Column(
                     children: [
-                      const Row(
+                      Row(
                         mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
+                        children: const [
                           Padding(padding: EdgeInsets.only(left: 12, top: 21), child: Icon(Icons.menu, size: 50)),
                         ],
                       ),

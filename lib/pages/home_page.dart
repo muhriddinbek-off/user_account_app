@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
                             Stack(
                               children: [
                                 // TODO: Add image from internet
-                                Image.network(snapshot.data!.image, height: 120, width: 120, fit: BoxFit.cover),
+                                ClipRRect(borderRadius: BorderRadius.circular(70), child: Image.network(snapshot.data!.image, height: 120, width: 120, fit: BoxFit.cover)),
                                 Positioned(bottom: 10, right: 10, child: Container(height: 19, width: 19, decoration: BoxDecoration(color: const Color(0xFF57FB0A), borderRadius: BorderRadius.circular(20)))),
                               ],
                             ),
